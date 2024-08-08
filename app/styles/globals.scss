@@ -1,0 +1,24 @@
+:root {
+	--background-color: #ffffff;
+	--primary-accent: #1db954;
+	--secondary-accent: #1ed760;
+
+	/* Text Colors */
+	--primary-text: #040512;
+	--secondary-text: #4a4a4a;
+	--tertiary-text: #808080;
+
+	/* Additional Colors */
+	--highlight: #ff4081;
+	--warning: #ff5722;
+	--success: #4caf50;
+	--info: #2196f3;
+}
+
+body {
+	background-color: var(--background-color);
+	color: "black";
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
