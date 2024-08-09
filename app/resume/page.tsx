@@ -1,9 +1,17 @@
-import React from "react";
+"use client";
+
+import CustomButton from "../components/Button";
 
 const ResumePage = () => {
+	const downloadResume = () => {};
+
 	return (
 		<div className="bg-gray-100 font-sans">
 			<div className="container mx-auto my-8 px-4 sm:px-6 lg:px-8">
+				<CustomButton
+					label="Download Resume"
+					handleClick={downloadResume}
+				></CustomButton>
 				<div className="bg-white shadow-md rounded-lg p-8">
 					<h1 className="text-3xl font-bold text-gray-800 mb-4">SKILLS</h1>
 					<p className="text-gray-700 mb-8">

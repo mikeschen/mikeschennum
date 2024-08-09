@@ -4,6 +4,7 @@ import { useChat } from "ai/react";
 import Image from "next/image";
 import authorPortrait from "../public/images/hero-main.jpg";
 import MessagesContainer from "./components/MessagesContainer";
+import { ABOUT } from "./data/about";
 
 export default function Chat() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat({
@@ -12,7 +13,7 @@ export default function Chat() {
 			{
 				id: "2",
 				role: "system",
-				content: "Mike Schennum is a software engineer from Arizona.",
+				content: ABOUT,
 			},
 		],
 	});
@@ -39,7 +40,7 @@ export default function Chat() {
 								autoFocus
 								className="w-full p-3 border border-gray-300 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
 								value={input}
-								placeholder="Ask any questions about Mike..."
+								placeholder="Ask me any questions about Mike..."
 								onChange={handleInputChange}
 							/>
 						</form>

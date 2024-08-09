@@ -23,14 +23,6 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link
-							href="/about"
-							className="rounded-md px-3 py-2 text-sm font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
-						>
-							About
-						</Link>
-					</li>
-					<li>
-						<Link
 							href="/contact"
 							className="rounded-md px-3 py-2 text-sm font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
 						>
