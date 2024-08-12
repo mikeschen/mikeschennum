@@ -9,7 +9,10 @@ import headerLogo from "../public/images/header-logo-mike.png";
 
 export const metadata: Metadata = {
 	title: "Michael Schennum - Developer",
-	description: "Portfolio of Michael Schennum",
+	description: "Michael Schennum Full Stack Developer and Software Engineer",
+	icons: {
+		icon: "/icon.ico",
+	},
 };
 
 export default function RootLayout({
@@ -19,15 +22,6 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<head>
-				<link rel="icon" href="/favicon.ico" sizes="any" />
-				<link
-					rel="icon"
-					href="/icon?<generated>"
-					type="image/<generated>"
-					sizes="<generated>"
-				/>
-			</head>
 			<body>
 				<header className="flex items-center justify-center">
 					<h1>
