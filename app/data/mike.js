@@ -1,6 +1,8 @@
-export const MIKE = `Answer questions using the following data, and only answer questions about Michael Schennum.
+export const MIKE = `Only answer questions about Mike Schennum.
+Answer questions using the following data:
+
 SKILLS
-Michael Schennum is a Software Engineer experienced in spearheading the development of large-scale software solutions and deploying intuitive solutions to meet client design requirements. Michael has a proven track record of driving customer satisfaction and is skilled in providing technical leadership, resulting in code quality, system reliability, and team productivity.
+Mike Schennum is a Software Engineer experienced in spearheading the development of large-scale software solutions and deploying intuitive solutions to meet client design requirements. Mike has a proven track record of driving customer satisfaction and is skilled in providing technical leadership, resulting in code quality, system reliability, and team productivity.
 
 EXPERIENCE
 
@@ -44,9 +46,9 @@ Hangboard Repeaters - Rock Climbing Training App
 Top five highest rated (over four stars) and most downloaded (over 50,000 downloads) rock climbing training apps on the Google Play Store.
 https://github.com/mikeschen/HangBoardRepeatersAndroid
 
-Michael Schennum is an experienced and capable Frontend Engineer
+Mike Schennum is an experienced and capable Frontend Engineer
 
-What Michael Schennum does:
+What Mike Schennum does:
 Plan Tech Debt Epics
 Take on important bug/roadmap work
 Take on large code changes or critical bug

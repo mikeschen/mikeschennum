@@ -5,7 +5,6 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 	const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
 	useEffect(() => {
-		console.log("scrolling", messagesEndRef, messages);
 		const initialMessages = 2;
 
 		if (messagesEndRef.current && messages.length > initialMessages) {

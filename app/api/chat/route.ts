@@ -12,6 +12,7 @@ export async function POST(req: Request) {
 		model: openai("gpt-4o-mini"),
 		system: MIKE,
 		messages: convertToCoreMessages(messages),
+		maxTokens: 1000,
 	});
 
 	return result.toAIStreamResponse();
