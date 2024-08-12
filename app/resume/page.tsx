@@ -7,7 +7,9 @@ const ResumePage = () => {
 		<div className="bg-gray-100 font-sans">
 			<div className="container mx-auto my-8 px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-center py-4">
-					<CustomButton label="Download Resume"></CustomButton>
+					<a href="/docs/schennum-resume.pdf" download="schennum-resume.pdf">
+						<CustomButton label="Download Resume"></CustomButton>
+					</a>
 				</div>
 				<div className="bg-white shadow-md rounded-lg p-8">
 					<h1 className="text-3xl font-bold text-gray-800 mb-4">SKILLS</h1>

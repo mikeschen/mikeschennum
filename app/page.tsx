@@ -18,8 +18,6 @@ export default function Chat() {
 		],
 	});
 
-	console.log("🤖", messages);
-
 	return (
 		<div className="flex">
 			<div className="w-1/2 pt-2">
