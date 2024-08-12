@@ -12,7 +12,7 @@ export default function Chat() {
 			{ id: "1", role: "user", content: "Tell me about Mike Schennum" },
 			{
 				id: "2",
-				role: "system",
+				role: "assistant",
 				content: ABOUT,
 			},
 		],

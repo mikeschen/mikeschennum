@@ -1,6 +1,6 @@
-import React from "react";
+import { Message } from "ai";
 
-const MessageList = ({ messages }: { messages: any[] }) => {
+const MessageList = ({ messages }: { messages: Message[] }) => {
 	return (
 		<div className="w-full max-w-md flex-grow overflow-y-auto py-8 space-y-4">
 			{messages.map((m) => (
