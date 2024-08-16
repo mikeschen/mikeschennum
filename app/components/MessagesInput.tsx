@@ -14,6 +14,9 @@ const MessagesInput = () => {
 				content: ABOUT,
 			},
 		],
+		onError: (error) => {
+			console.error(error);
+		},
 	});
 
 	return (
