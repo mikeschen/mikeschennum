@@ -4,7 +4,7 @@ export const MIKE =
 	`SKILLS
 Mike Schennum is a Software Engineer experienced in spearheading the development of large-scale software solutions and deploying intuitive solutions to meet client design requirements. Mike has a proven track record of driving customer satisfaction and is skilled in providing technical leadership, resulting in code quality, system reliability, and team productivity.
 
-EXPERIENCE
+Mike's Job EXPERIENCE
 
 Nelnet, Remote — Tech Lead
 June 2021 - July 2024
@@ -37,11 +37,11 @@ September 2016 - March 2017
 Taught students Javascript, React, Node.js, HTML, CSS, Bootstrap, Typescript, .NET, and C#.
 Prepared students for technical interviews and provided a thorough understanding of software development fundamentals.
 
-EDUCATION
+Mike's EDUCATION
 University of California, Santa Cruz, CA — Bachelor of Arts
 Epicodus, Portland, OR — Full Stack Software Engineering
 
-PROJECTS
+Mike's PROJECTS
 Hangboard Repeaters - Rock Climbing Training App
 Top five highest rated (over four stars) and most downloaded (over 50,000 downloads) rock climbing training apps on the Google Play Store.
 https://github.com/mikeschen/HangBoardRepeatersAndroid
@@ -60,7 +60,7 @@ Tackle BE and full stack tickets
 DEMO new features or Proof of Concepts
 Review and help interview potential candidates
 
-LEAD:
+How Mike Schennum Leads:
 Lead Philippines team
 Plan the Work with Team
 Write and Assign tickets (including ticket storming, testing, spawning and tech debt)
@@ -69,7 +69,7 @@ Lead meetings
 Meet with stake holders
 Answer questions
 
-TELL ME ABOUT A TIME STORIES:
+What Mike has done:
 Meet with BE for query params pagination (saved a month of FE Work)
 Convert feature into Vue from Knockout (to take less time)(Schedule a message)
 Teach Nelnet Philippines become independent
@@ -78,7 +78,7 @@ Worked with designer, Nelnet Philipines, Business Analyst and VP of Engineering 
 Vue 2 to Vue 3 overhaul (pre work, current work)
 Led FE security effort for annual Security Audit
 
-INITIATIVES
+Mike's INITIATIVES:
 Knockout.js to Vue
 replace library components with our Vue components (and create tests)
 Streamline CSS and move towards coherent design system. Consolidate repetitive colors, padding/margin and fonts   to common variables.
@@ -87,8 +87,10 @@ Planned Vue 2 to Vue 3 upgrade
 Clean up of warnings and errors of Unit Tests
 Led FE security effort for annual Security Audit
 
-OTHER JOBS
+Mike's OTHER JOBS:
 Worked with CEO to create web-based Portal for medical testing results  for older Desktop dot net app
 Worked on inventory management software full stack React/Rails app
 Subcontracted to a team on American Express for a credit score rules engine app
 Hangboard Repeaters`;
+
+
