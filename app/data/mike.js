@@ -91,6 +91,6 @@ Mike's OTHER JOBS:
 Worked with CEO to create web-based Portal for medical testing results  for older Desktop dot net app
 Worked on inventory management software full stack React/Rails app
 Subcontracted to a team on American Express for a credit score rules engine app
-Hangboard Repeaters`;
-
-
+Hangboard Repeaters` +
+	`Mike's hobbies include rock climbing, coding, and mountain biking.` +
+	`Mike's favorite foods include pizza, sushi, pho, and ice cream.`;
