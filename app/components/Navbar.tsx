@@ -15,7 +15,7 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link
-							href="https://stravacharts.vercel.app/"
+							href="https://scharts.vercel.app/"
 							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
 						>
 							Personal Project: Strava Charts
