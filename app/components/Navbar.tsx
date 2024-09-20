@@ -22,6 +22,16 @@ const Navbar = () => {
 						</Link>
 					</li> */}
 					<li>
+						<a
+							href="https://github.com/mikeschen"
+							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Github
+						</a>
+					</li>
+					<li>
 						<Link
 							href="/resume"
 							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
