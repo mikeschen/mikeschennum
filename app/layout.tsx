@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 	icons: {
 		icon: "/icon.ico",
 	},
+	keywords: ["Michael Schennum", "Developer", "Software Engineer", "Full Stack", "React", "Node", "Next.js", "Tailwind", "TypeScript", "JavaScript", "Vue", "Angular", "Svelte", "Express", "MongoDB", "PostgreSQL", "MySQL", "Docker", "AWS", "", "Azure", "CI/CD", "", "GitHub", "GitLab", "Bitbucket", "Jira", "Confluence", "Slack", "Teams", "Zoom", "", "WebSockets", "REST", "GraphQL", "OpenAPI", "", "Postman", "", "VSCode", "DBeaver", "MongoDB Compass", "Docker Compose"]
 };
 
 export default function RootLayout({
