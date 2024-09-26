@@ -24,7 +24,7 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 					}`}
 				>
 					<span className="font-bold">
-						{m.role === "user" ? "👨‍💻: " : "🤖: "}
+						{m.role === "user" ? "User 👨‍💻: " : "AI RAG Bot 🤖: "}
 					</span>
 					{m.content}
 				</div>

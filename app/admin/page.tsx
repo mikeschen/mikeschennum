@@ -1,11 +1,24 @@
 "use client";
 
 import { useChat } from "ai/react";
+import { useLayoutEffect } from "react";
+import { redirect } from "next/navigation";
 
 export default function Chat() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat({
 		maxToolRoundtrips: 3,
+		async onToolCall({ toolCall }) {
+			console.log("calling tool 🤖", toolCall);
+		},
 	});
+
+	// useLayoutEffect(() => {
+	// 	const isAuth = false;
+	// 	if (!isAuth) {
+	// 		redirect("/");
+	// 	}
+	// }, []);
+
 	return (
 		<div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
 			<div className="space-y-4">

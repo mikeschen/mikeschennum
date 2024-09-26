@@ -10,6 +10,7 @@ export default function Chat() {
 					<Image
 						src={authorPortrait}
 						alt="Author at work on his laptop"
+						priority
 						height={400}
 					></Image>
 				</div>
