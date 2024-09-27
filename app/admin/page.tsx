@@ -1,23 +1,22 @@
 "use client";
 
 import { useChat } from "ai/react";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useContext } from "react";
 import { redirect } from "next/navigation";
+import AuthContext from "../contexts/AuthContext";
 
 export default function Chat() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat({
 		maxToolRoundtrips: 3,
-		async onToolCall({ toolCall }) {
-			console.log("calling tool 🤖", toolCall);
-		},
 	});
 
-	// useLayoutEffect(() => {
-	// 	const isAuth = false;
-	// 	if (!isAuth) {
-	// 		redirect("/");
-	// 	}
-	// }, []);
+	const { isAuth } = useContext(AuthContext);
+
+	useLayoutEffect(() => {
+		if (!isAuth) {
+			redirect("/");
+		}
+	}, [isAuth]);
 
 	return (
 		<div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
@@ -39,7 +38,6 @@ export default function Chat() {
 					</div>
 				))}
 			</div>
-
 			<form onSubmit={handleSubmit}>
 				<input
 					className="fixed bottom-0 w-full max-w-md p-2 mb-8 border border-gray-300 rounded shadow-xl"

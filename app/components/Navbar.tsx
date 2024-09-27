@@ -1,6 +1,15 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+	const pathname = usePathname();
+
+	const getActiveClass = (path: string) => {
+		return path === pathname ? "text-green-100 bg-green-600" : "text-green-500";
+	};
+
 	return (
 		<nav className="bg-white p-4">
 			<div className="container mx-auto flex justify-between items-center">
@@ -8,7 +17,9 @@ const Navbar = () => {
 					<li>
 						<Link
 							href="/"
-							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
+							className={`rounded-md px-3 py-2 text-md font-medium hover:bg-green-700 hover:text-green-100 ${getActiveClass(
+								"/"
+							)}`}
 						>
 							Home
 						</Link>
@@ -16,7 +27,7 @@ const Navbar = () => {
 					{/* <li>
 						<Link
 							href="https://scharts.vercel.app/"
-							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
+							className="rounded-md px-3 py-2 text-md font-medium hover:bg-green-600 hover:text-green-100"
 						>
 							Personal Project: Strava Charts
 						</Link>
@@ -24,7 +35,7 @@ const Navbar = () => {
 					<li>
 						<a
 							href="https://github.com/mikeschen"
-							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
+							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-700 hover:text-green-100"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -34,7 +45,9 @@ const Navbar = () => {
 					<li>
 						<Link
 							href="/resume"
-							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
+							className={`rounded-md px-3 py-2 text-md font-medium hover:bg-green-700 hover:text-green-100 ${getActiveClass(
+								"/resume"
+							)}`}
 						>
 							Resume
 						</Link>
@@ -42,9 +55,21 @@ const Navbar = () => {
 					<li>
 						<Link
 							href="/contact"
-							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-600 hover:text-green-100"
+							className={`rounded-md px-3 py-2 text-md font-medium hover:bg-green-700 hover:text-green-100 ${getActiveClass(
+								"/contact"
+							)}`}
 						>
 							Contact
+						</Link>
+					</li>
+					<li>
+						<Link
+							href="/login"
+							className={`rounded-md px-3 py-2 text-md font-medium hover:bg-green-700 hover:text-green-100 ${getActiveClass(
+								"/admin"
+							)}`}
+						>
+							Admin
 						</Link>
 					</li>
 				</ul>

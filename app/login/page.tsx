@@ -1,18 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import { useRouter } from "next/navigation";
+import AuthContext from "../contexts/AuthContext";
 
 const LoginPage = () => {
 	const [password, setPassword] = useState("");
 	const router = useRouter();
+	const { login } = useContext(AuthContext);
 
 	const handleSubmit = (event: React.FormEvent) => {
 		event.preventDefault();
 		if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
+			login();
 			router.push("/admin");
 		}
-
 		setPassword("");
 	};
 

@@ -6,6 +6,7 @@ import "./styles/globals.scss";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import headerLogo from "../public/images/header-logo-mike.png";
+import { AuthProvider } from "./contexts/AuthProvider";
 
 export const metadata: Metadata = {
 	title: "Michael Schennum - Developer",
@@ -81,7 +82,9 @@ export default function RootLayout({
 					</h1>
 				</header>
 				<Navbar></Navbar>
-				<main>{children}</main>
+				<AuthProvider>
+					<main>{children}</main>
+				</AuthProvider>
 				<Footer></Footer>
 			</body>
 		</html>
