@@ -17,6 +17,7 @@ const MessagesInput = () => {
 		onError: (error) => {
 			console.error(error);
 		},
+		maxToolRoundtrips: 2,
 	});
 
 	return (

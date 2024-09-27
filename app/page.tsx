@@ -2,7 +2,7 @@ import Image from "next/image";
 import authorPortrait from "../public/images/hero-main.jpg";
 import MessagesInput from "./components/MessagesInput";
 
-export default function Chat() {
+export default function UserChat() {
 	return (
 		<div className="flex">
 			<div className="w-1/2 pt-2">

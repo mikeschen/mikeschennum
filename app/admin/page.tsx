@@ -5,8 +5,9 @@ import { useLayoutEffect, useContext } from "react";
 import { redirect } from "next/navigation";
 import AuthContext from "../contexts/AuthContext";
 
-export default function Chat() {
+export default function AdminChat() {
 	const { messages, input, handleInputChange, handleSubmit } = useChat({
+		api: "api/adminChat",
 		maxToolRoundtrips: 3,
 	});
 

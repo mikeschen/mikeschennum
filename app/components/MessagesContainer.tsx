@@ -12,9 +12,15 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 		}
 	}, [messages]);
 
-	return (
-		<div className="w-full max-w-md flex-grow overflow-y-auto py-8 space-y-4">
-			{messages.map((m) => (
+	console.log("messages 🤖", messages);
+
+	const renderMessage = (m: Message, index: Number) => {
+		if (m.content.length === 0 && index === messages.length - 1) {
+			return <div className="text-gray-700 p-1">Typing...</div>;
+		}
+
+		if (m.content.length > 0) {
+			return (
 				<div
 					key={m.id}
 					className={`whitespace-pre-wrap p-3 rounded-lg ${
@@ -28,7 +34,13 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 					</span>
 					{m.content}
 				</div>
-			))}
+			);
+		}
+	};
+
+	return (
+		<div className="w-full max-w-md flex-grow overflow-y-auto py-8 space-y-4">
+			{messages.map(renderMessage)}
 			<div ref={messagesEndRef} />
 		</div>
 	);
