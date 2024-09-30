@@ -1,8 +1,7 @@
 import { openai } from "@ai-sdk/openai";
 import { streamText, convertToCoreMessages, tool } from "ai";
 import { SYSTEM } from "../../data/system.js";
-import { z } from "zod";
-import { findRelevantContent } from "../../../lib/ai/embedding";
+import { getInformation } from "../tools";
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -15,13 +14,7 @@ export async function POST(req: Request) {
 		system: SYSTEM,
 		messages: convertToCoreMessages(messages),
 		tools: {
-			getInformation: tool({
-				description: `get information from your knowledge base to answer questions.`,
-				parameters: z.object({
-					question: z.string().describe("the users question"),
-				}),
-				execute: async ({ question }) => findRelevantContent(question),
-			}),
+			getInformation,
 		},
 		maxTokens: 1000,
 	});

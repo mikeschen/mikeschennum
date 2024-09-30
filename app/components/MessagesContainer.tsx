@@ -14,7 +14,11 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 
 	const renderMessage = (m: Message, index: Number) => {
 		if (m.content.length === 0 && index === messages.length - 1) {
-			return <div className="text-gray-700 p-1">Typing...</div>;
+			return (
+				<div key={m.id} className="text-gray-700 p-1">
+					Typing...
+				</div>
+			);
 		}
 
 		if (m.content.length > 0) {
@@ -34,11 +38,15 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 				</div>
 			);
 		}
+
+		return null;
 	};
 
 	return (
 		<div className="w-full max-w-md flex-grow overflow-y-auto py-8 space-y-4">
-			{messages.map(renderMessage)}
+			{messages.map((m, index) => (
+				<div key={m.id}>{renderMessage(m, index)}</div>
+			))}
 			<div ref={messagesEndRef} />
 		</div>
 	);
