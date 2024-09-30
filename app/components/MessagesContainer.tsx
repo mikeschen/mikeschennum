@@ -12,8 +12,6 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 		}
 	}, [messages]);
 
-	console.log("messages 🤖", messages);
-
 	const renderMessage = (m: Message, index: Number) => {
 		if (m.content.length === 0 && index === messages.length - 1) {
 			return <div className="text-gray-700 p-1">Typing...</div>;
