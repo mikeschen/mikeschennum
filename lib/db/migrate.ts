@@ -19,7 +19,7 @@ const runMigrate = async () => {
 	const end = Date.now();
 
 	process.exit(0);
-};
+}
 
 runMigrate().catch((err) => {
 	console.error("❌ Migration failed");

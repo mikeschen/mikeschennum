@@ -15,6 +15,34 @@
       "when": 1727283522758,
       "tag": "0001_violet_tenebrous",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1727802619536,
+      "tag": "0002_deep_iron_monger",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1727803605943,
+      "tag": "0003_busy_xorn",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1727803794000,
+      "tag": "0004_lively_diamondback",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1727803826311,
+      "tag": "0005_serious_excalibur",
+      "breakpoints": true
     }
   ]
 }
