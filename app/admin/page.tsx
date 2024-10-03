@@ -11,13 +11,13 @@ export default function AdminChat() {
 		maxToolRoundtrips: 3,
 	});
 
-	const { isAuth } = useContext(AuthContext);
+	// const { isAuth } = useContext(AuthContext);
 
-	useLayoutEffect(() => {
-		if (!isAuth) {
-			redirect("/");
-		}
-	}, [isAuth]);
+	// useLayoutEffect(() => {
+	// 	if (!isAuth) {
+	// 		redirect("/");
+	// 	}
+	// }, [isAuth]);
 
 	return (
 		<div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">

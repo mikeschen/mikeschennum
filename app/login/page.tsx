@@ -6,18 +6,18 @@ import AuthContext from "../contexts/AuthContext";
 import LoginForm from "../components/LoginForm";
 
 const LoginPage = () => {
-	const [password, setPassword] = useState("");
-	const router = useRouter();
-	const { login } = useContext(AuthContext);
+	// const [password, setPassword] = useState("");
+	// const router = useRouter();
+	// const { login } = useContext(AuthContext);
 
-	const handleSubmit = (event: React.FormEvent) => {
-		event.preventDefault();
-		if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
-			login();
-			router.push("/admin");
-		}
-		setPassword("");
-	};
+	// const handleSubmit = (event: React.FormEvent) => {
+	// 	event.preventDefault();
+	// 	if (password === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
+	// 		login();
+	// 		router.push("/admin");
+	// 	}
+	// 	setPassword("");
+	// };
 
 	return (
 		// <div className="flex justify-center items-center py-4 bg-gray-100">
