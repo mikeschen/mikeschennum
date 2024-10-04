@@ -17,7 +17,7 @@ async function getUser(email: string) {
 	return user[0] || null; // Return the first result or null if no user found
 }
 
-export const { auth, signIn, signOut } = NextAuth({
+export const { handlers, auth, signIn, signOut } = NextAuth({
 	...authConfig,
 	providers: [
 		Credentials({
@@ -31,7 +31,7 @@ export const { auth, signIn, signOut } = NextAuth({
 					const user = await getUser(email);
 					if (!user) return null;
 
-					if (password === user.password) return user;
+					if (password === user.password) return { ...user, id: user.id.toString() };
 
 					console.log("Invalid credentials ✋");
 					return null;

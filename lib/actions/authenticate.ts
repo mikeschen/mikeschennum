@@ -1,6 +1,6 @@
 "use server";
 
-import { signIn } from "../../auth";
+import { signIn, signOut } from "../../auth";
 import { AuthError } from "next-auth";
 
 export async function authenticate(
@@ -17,6 +17,17 @@ export async function authenticate(
 				default:
 					return "Something went wrong.";
 			}
+		}
+		throw error;
+	}
+}
+
+export async function signOutSession() {
+	try {
+		await signOut();
+	} catch (error) {
+		if (error instanceof AuthError) {
+			return "Something went wrong.";
 		}
 		throw error;
 	}
