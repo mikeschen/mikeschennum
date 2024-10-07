@@ -1,6 +1,6 @@
 "use client";
 
-import CustomButton from "../components/CustomButton";
+import BaseButton from "../components/BaseButton";
 
 const ResumePage = () => {
 	return (
@@ -8,7 +8,7 @@ const ResumePage = () => {
 			<div className="container mx-auto my-8 px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-center py-4">
 					<a href="/docs/schennum-resume.pdf" download="schennum-resume.pdf">
-						<CustomButton label="Download Resume"></CustomButton>
+						<BaseButton label="Download Resume"></BaseButton>
 					</a>
 				</div>
 				<div className="bg-white shadow-md rounded-lg p-8">
