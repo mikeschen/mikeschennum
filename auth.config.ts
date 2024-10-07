@@ -8,16 +8,24 @@ export const authConfig = {
 	callbacks: {
 		authorized({ auth, request: { nextUrl } }) {
 			const isLoggedIn = !!auth?.user;
-			const isOnLogin = nextUrl.pathname.startsWith("/login");
-			const isOnAdmin = nextUrl.pathname.startsWith("/admin");
-			if (isOnAdmin) {
-				if (isLoggedIn) return true;
-				return false; // Redirect unauthenticated users to login page
-			} else if (isLoggedIn && isOnLogin) {
-				return Response.redirect(new URL("/admin", nextUrl));
+			const isAdminRoute = nextUrl.pathname.startsWith("/admin");
+
+			if (isAdminRoute && !isLoggedIn) {
+				return false; // Redirect to login page if user is not authenticated
+			}
+
+			if (isAdminRoute && isLoggedIn) {
+				return true;
 			}
 
 			return true;
+		},
+		async signIn({ user, account, profile }) {
+			return true; // Return true to proceed with login
+		},
+		async redirect({ url, baseUrl }) {
+			// Redirect to /admin after login
+			return baseUrl + "/admin";
 		},
 	},
 	providers: [], // Add providers with an empty array for now
