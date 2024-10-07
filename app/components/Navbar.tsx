@@ -64,7 +64,7 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link
-							href="/login"
+							href="/admin"
 							className={`rounded-md px-3 py-2 text-md font-medium hover:bg-green-700 hover:text-green-100 ${getActiveClass(
 								"/admin"
 							)}`}

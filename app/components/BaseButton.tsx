@@ -1,4 +1,4 @@
-const CustomButton = ({ label }: { label: string }) => {
+const BaseButton = ({ label }: { label: string }) => {
 	return (
 		<button className="text-green-500 hover:bg-green-600 hover:text-green-100 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
 			<svg
@@ -13,4 +13,4 @@ const CustomButton = ({ label }: { label: string }) => {
 	);
 };
 
-export default CustomButton;
+export default BaseButton;
