@@ -2,17 +2,12 @@
 
 import { useFormState } from "react-dom";
 import { authenticate } from "../../lib/actions/authenticate";
-import { useSession } from "next-auth/react";
 
-export default function LoginForm() {
+export default function LoginPage() {
 	const [errorMessage, formAction, isPending] = useFormState(
 		authenticate,
 		undefined
 	);
-
-	const { data: session, status } = useSession();
-
-	console.log("session, status 👹", session, status);
 
 	return (
 		<main className="flex items-center justify-center md:h-screen">
