@@ -14,10 +14,6 @@ export const authConfig = {
 				return false; // Redirect to login page if user is not authenticated
 			}
 
-			if (isAdminRoute && isLoggedIn) {
-				return true;
-			}
-
 			return true;
 		},
 		async signIn({ user, account, profile }) {
