@@ -7,11 +7,8 @@ export default function Contact() {
 				<div className="space-y-4">
 					<div>
 						<h2 className="text-xl font-semibold">Email</h2>
-						<a
-							href="mailto:mikeschenphoto@gmail.com"
-							className="text-green-500"
-						>
-							mikeschenphoto@gmail.com
+						<a href="mailto:mike@mikeschen.com" className="text-green-500">
+							mike@mikeschen.com
 						</a>
 					</div>
 
