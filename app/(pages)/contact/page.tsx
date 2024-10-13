@@ -1,4 +1,4 @@
-import EmailContact from "../components/EmailContact";
+import EmailContact from "../../components/EmailContact";
 
 export default function Contact() {
 	return (

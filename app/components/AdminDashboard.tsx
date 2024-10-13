@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { signOutSession } from "../../lib/actions/authenticate";
 
 export default function AdminDashboard() {
-	const { data: session, status } = useSession();
+	const { data: session } = useSession();
 
 	const { messages, input, handleInputChange, handleSubmit } = useChat({
 		api: "api/adminChat",
@@ -24,7 +24,7 @@ export default function AdminDashboard() {
 		<div className="flex justify-center">
 			<div className="w-full max-w-md flex-grow overflow-y-auto py-8 space-y-4">
 				<div className="space-y-4">
-					<h2>Welcome {session?.user?.name}</h2>
+					<h2>{session ? "Welcome " + session?.user?.name : "Loading..."}</h2>
 					{messages.map((m) => (
 						<div key={m.id} className="whitespace-pre-wrap">
 							<div>

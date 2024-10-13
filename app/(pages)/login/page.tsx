@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormState } from "react-dom";
-import { authenticate } from "../../lib/actions/authenticate";
+import { authenticate } from "../../../lib/actions/authenticate";
 
 export default function LoginPage() {
 	const [errorMessage, formAction, isPending] = useFormState(
