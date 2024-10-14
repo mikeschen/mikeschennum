@@ -1,10 +1,11 @@
 "use client";
 
-import { useTransition, useRef } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { useTransition } from "react";
+import { Toaster } from "react-hot-toast";
+import useSubmitForm from "../hooks/useFetch";
 
 const EmailContact = () => {
-	const formRef = useRef<HTMLFormElement>(null);
+	const { formRef, submitForm } = useSubmitForm();
 
 	const [isPending, startTransition] = useTransition();
 
@@ -14,17 +15,7 @@ const EmailContact = () => {
 			const email = formData.get("email") as string;
 			const message = formData.get("message") as string;
 
-			const res = await fetch("/api/mail", {
-				method: "POST",
-				body: JSON.stringify({ name, email, message }),
-			});
-
-			if (res?.status === 200) {
-				toast.success("Message sent!");
-				formRef.current?.reset();
-			} else {
-				toast.error("Failed to send message");
-			}
+			await submitForm("/api/mail", { name, email, message });
 		});
 	};
 
@@ -43,6 +34,7 @@ const EmailContact = () => {
 						Name
 					</label>
 					<input
+						autoFocus
 						type="text"
 						id="name"
 						name="name"
@@ -91,7 +83,7 @@ const EmailContact = () => {
 					className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
 					disabled={isPending}
 				>
-					Send Message
+					{isPending ? "Sending..." : "Send Message"}
 				</button>
 			</form>
 		</div>
