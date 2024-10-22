@@ -11,7 +11,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="bg-white p-4">
+		<nav className="bg-white p-4 border-t border-b">
 			<div className="container mx-auto flex justify-between items-center">
 				<ul className="flex space-x-4 justify-evenly w-full">
 					<li>
