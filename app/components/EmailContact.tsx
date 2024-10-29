@@ -9,7 +9,7 @@ const EmailContact = () => {
 
 	const [isPending, startTransition] = useTransition();
 
-	const handleSubmitContact = (formData: FormData) => {
+	const handleSubmitContact = (formData) => {
 		startTransition(async () => {
 			const name = formData.get("name") as string;
 			const email = formData.get("email") as string;

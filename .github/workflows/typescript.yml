@@ -1,0 +1,25 @@
+name: TypeScript Check
+
+# Run the workflow on every push or pull request
+on: [push, pull_request]
+
+jobs:
+  type-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - uses: actions/checkout@v4
+
+      # Step 2: Install Node.js dependencies
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Use a compatible Node.js version for your project
+
+      - name: Install dependencies
+        run: npm install
+
+      # Step 3: Run TypeScript type-checking
+      - name: Run TypeScript Check
+        run: npx tsc --noEmit
