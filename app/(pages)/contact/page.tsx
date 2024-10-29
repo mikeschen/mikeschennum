@@ -2,7 +2,7 @@ import EmailContact from "../../components/EmailContact";
 
 export default function Contact() {
 	return (
-		<div className="bg-gray-100 p-8">
+		<div className="bg-gray-100 p-8 dark:bg-gray-950">
 			<div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
 				<div className="space-y-4">
 					<div>

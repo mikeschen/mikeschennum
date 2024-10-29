@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import "./globals.css";
 import "./styles/globals.scss";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import headerLogo from "../public/images/header-logo-mike.png";
-import { AuthProvider } from "./contexts/AuthProvider";
+import { ThemeProvider } from "./contexts/ThemeProvider";
+import App from "./app";
 
 export const metadata: Metadata = {
 	title: "Michael Schennum - Developer",
@@ -69,23 +65,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<header className="flex items-center justify-center">
-					<h1>
-						<Link href={"/"}>
-							<Image
-								src={headerLogo}
-								width={240}
-								priority
-								alt="Mike Logo"
-							></Image>
-						</Link>
-					</h1>
-				</header>
-				<Navbar></Navbar>
-				<AuthProvider>
-					<main>{children}</main>
-				</AuthProvider>
-				<Footer></Footer>
+				<ThemeProvider>
+					<App>{children}</App>
+				</ThemeProvider>
 			</body>
 		</html>
 	);

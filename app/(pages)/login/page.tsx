@@ -10,10 +10,10 @@ export default function LoginPage() {
 	);
 
 	return (
-		<main className="flex items-center justify-center md:h-screen">
+		<main className="flex items-center justify-center md:h-screen bg-gray-100 dark:bg-gray-950">
 			<div className="flex w-full max-w-[400px] flex-col space-y-2.5 p-4 md:-mt-32">
 				<form action={formAction} className="space-y-3">
-					<div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">
+					<div className="flex-1 rounded-lg bg-white px-6 pb-4 pt-8">
 						<h1 className="mb-3 text-2xl">Please log in to continue.</h1>
 						<div className="w-full">
 							<div>

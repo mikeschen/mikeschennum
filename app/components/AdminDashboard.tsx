@@ -26,7 +26,7 @@ export default function AdminDashboard() {
 	};
 
 	return (
-		<div className="flex justify-center">
+		<div className="flex justify-center dark:bg-gray-950">
 			<div className="w-full max-w-md flex-grow overflow-y-auto py-8 space-y-4">
 				<div className="space-y-4">
 					<h2>{user ? "Welcome " + user : "Loading..."}</h2>

@@ -1,12 +1,12 @@
 const Footer = () => {
 	return (
-		<footer className="bg-white text-gray-800 py-6">
+		<footer className="bg-white text-gray-600 py-6 dark:bg-gray-950 dark:text-gray-400 text-xs">
 			<div className="container mx-auto text-center">
-				<div className="mb-2 text-gray-600 text-xs">
+				<div className="mb-2">
 					Built with React, Next.js, Auth.js, Tailwind CSS, Drizzle, Postgres,
 					OpenAI, SendGrid and Vercel AI SDK.
 				</div>
-				<div className="text-gray-600 text-xs">
+				<div>
 					&copy; {new Date().getFullYear()} Michael Schennum. All rights
 					reserved.
 				</div>

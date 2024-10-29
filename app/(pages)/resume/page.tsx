@@ -4,7 +4,7 @@ import BaseButton from "../../components/BaseButton";
 
 const ResumePage = () => {
 	return (
-		<div className="bg-gray-100 font-sans container mx-auto my-8 px-4 sm:px-6 lg:px-8">
+		<div className="bg-gray-100 dark:bg-gray-950 font-sans container mx-auto my-8 px-4 sm:px-6 lg:px-8">
 			<div className="flex justify-center py-4">
 				<a href="/docs/schennum-resume.pdf" download="schennum-resume.pdf">
 					<BaseButton label="Download Resume"></BaseButton>

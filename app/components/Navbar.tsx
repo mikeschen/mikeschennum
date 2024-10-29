@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ToggleDarkMode from "./ToggleDarkMode";
 
 const Navbar = () => {
 	const pathname = usePathname();
@@ -11,7 +12,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="bg-white p-4 border-t border-b">
+		<nav className="p-4 border-t border-b dark:bg-gray-950">
 			<div className="container mx-auto flex justify-between items-center">
 				<ul className="flex space-x-4 justify-evenly w-full">
 					<li>
@@ -71,6 +72,9 @@ const Navbar = () => {
 						>
 							Admin
 						</Link>
+					</li>
+					<li>
+						<ToggleDarkMode />
 					</li>
 				</ul>
 			</div>
