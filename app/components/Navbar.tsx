@@ -25,14 +25,16 @@ const Navbar = () => {
 							Home
 						</Link>
 					</li>
-					{/* <li>
-						<Link
-							href="https://scharts.vercel.app/"
-							className="rounded-md px-3 py-2 text-md font-medium hover:bg-green-600 hover:text-green-100"
+					<li>
+						<a
+							href="https://play.google.com/store/apps/details?id=com.mikeschen.www.hangboardrepeaters"
+							className="rounded-md px-3 py-2 text-md font-medium text-green-500 hover:bg-green-700 hover:text-green-100"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-							Personal Project: Strava Charts
-						</Link>
-					</li> */}
+							Personal Project: Android App
+						</a>
+					</li>
 					<li>
 						<a
 							href="https://github.com/mikeschen"
