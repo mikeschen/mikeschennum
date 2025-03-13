@@ -43,7 +43,7 @@ const MessageList = ({ messages }: { messages: Message[] }) => {
 	};
 
 	return (
-		<div className="w-full max-w-md flex-grow overflow-y-auto py-8 space-y-4">
+		<div className="w-full max-w-md flex-grow overflow-y-auto pt-8 space-y-4">
 			{messages.map((m, index) => (
 				<div key={m.id}>{renderMessage(m, index)}</div>
 			))}

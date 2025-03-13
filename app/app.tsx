@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import headerLogo from "../public/images/header-logo-mike.png";
 import headerLogoDark from "../public/images/header-logo-mike-dark.png";
 import ThemeContext from "./contexts/ThemeContext";
+import Socials from "./components/Socials";
 
 interface AppProps {
 	children: ReactNode;
@@ -32,6 +33,9 @@ const App = ({ children }: AppProps) => {
 			</header>
 			<Navbar></Navbar>
 			<main>{children}</main>
+      <footer className="dark:bg-gray-950 pt-4">
+        <Socials />
+      </footer>
 			<Footer></Footer>
 		</>
 	);

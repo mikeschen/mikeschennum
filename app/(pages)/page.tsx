@@ -11,9 +11,9 @@ export default function UserChat() {
 	const { darkMode } = useContext(ThemeContext);
 
 	return (
-		<div className="flex dark:bg-gray-950">
+		<div className="flex dark:bg-gray-950 pt-4">
 			<div className="w-1/2 pt-2">
-				<div className="relative min-h-screen grid justify-items-end">
+				<div className="relative grid justify-items-end">
 					<Image
 						src={darkMode ? authorPortraitDark : authorPortrait}
 						alt="Author at work on his laptop"
